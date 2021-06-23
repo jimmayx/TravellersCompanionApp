@@ -1,0 +1,79 @@
+name: Build Pull Request
+
+on: pull_request
+
+jobs:
+  test_job:
+    name: Test
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Restore Cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+            
+      - name: Access GOOGLE_MAPS_KEY
+        env:
+            GOOGLE_MAPS_KEY: ${{ secrets.GOOGLE_MAPS_KEY }}
+        run: echo GOOGLE_MAPS_KEY=\"$GOOGLE_MAPS_KEY\" > ./local.properties
+
+      - name: Access YANDEX_API_KEY
+        env:
+            YANDEX_API_KEY: ${{ secrets.YANDEX_API_KEY }}
+        run: echo YANDEX_API_KEY=\"$YANDEX_API_KEY\" > ./local.properties
+
+      - name: Run Debug Tests
+        run: ./gradlew testDebugUnitTest --continue
+
+      - name: Run Instrumented Tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 28
+          target: default
+          arch: x86_64
+          profile: Nexus 6
+          script: ./gradlew connectedCheck --continue
+
+      - name: Upload Test Reports
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-reports
+          path: '**/build/reports/tests/'
+
+  assemble_job:
+    name: Assemble
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Restore Cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Assemble Debug
+        run: ./gradlew assembleDebug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v2
+        with:
+          name: apk
+          path: app/build/outputs/apk/debug/**.apk
