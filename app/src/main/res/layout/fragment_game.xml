@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.game.GameFragment">
+
+    <data>
+
+        <variable
+            name="gameViewModel"
+            type="op.mobile.app.dev.simjd1.travelling.ui.game.GameViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_32"
+            android:gravity="center"
+            android:text="@{gameViewModel.question}"
+            android:textSize="@dimen/text_size_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_32"
+            android:layout_marginEnd="@dimen/margin_32"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:text="@{gameViewModel.score.toString()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/gameFlag"
+            android:layout_width="@dimen/layout_200dp"
+            android:layout_height="@dimen/layout_200dp"
+            android:layout_marginStart="@dimen/layout100dp"
+            android:layout_marginTop="@dimen/margin_32"
+            android:contentDescription="@string/flag"
+            app:flagImage="@{gameViewModel.country.flagImg}"
+            app:layout_constraintBottom_toTopOf="@id/tbl_btns"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_question" />
+
+        <TableLayout
+            android:id="@+id/tbl_btns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="parent">
+
+            <TableRow
+                android:id="@+id/tblrw1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_ans1"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_8"
+                    android:onClick="@{() -> gameViewModel.checkAnswer(gameViewModel.answer1)}"
+                    android:text="@{gameViewModel.answer1}"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text_size_12" />
+
+                <Button
+                    android:id="@+id/btn_ans2"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_8"
+                    android:onClick="@{() -> gameViewModel.checkAnswer(gameViewModel.answer2)}"
+                    android:text="@{gameViewModel.answer2}"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text_size_12" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tblrw2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_ans3"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_8"
+                    android:onClick="@{() -> gameViewModel.checkAnswer(gameViewModel.answer3)}"
+                    android:text="@{gameViewModel.answer3}"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text_size_12"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <Button
+                    android:id="@+id/btn_ans4"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_8"
+                    android:onClick="@{() -> gameViewModel.checkAnswer(gameViewModel.answer4)}"
+                    android:text="@{gameViewModel.answer4}"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text_size_12"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </TableRow>
+
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

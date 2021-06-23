@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_32">32dp</dimen>
+    <dimen name="margin_64">64dp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="radius_8">8dp</dimen>
+    <dimen name="layout50dp">50dp</dimen>
+    <dimen name="layout10dp">10dp</dimen>
+    <dimen name="layout0dp">0dp</dimen>
+    <dimen name="layout100dp">100dp</dimen>
+    <dimen name="corner_radius_4dp">4dp</dimen>
+    <dimen name="layout150dp">150dp</dimen>
+    <dimen name="layout145dp">145dp</dimen>
+    <dimen name="layout75dp">75dp</dimen>
+    <dimen name="margin_4">4dp</dimen>
+    <dimen name="padding_5">5dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_15">15dp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="width175dp">175dp</dimen>
+    <dimen name="margin_125dp">125dp</dimen>
+    <dimen name="layout_0dp">0dp</dimen>
+    <dimen name="layout125dp">125dp</dimen>
+    <dimen name="layout_300dp">300dp</dimen>
+    <dimen name="textSize_50sp">50sp</dimen>
+    <dimen name="layout_200dp">200dp</dimen>
+    <dimen name="textSize_25sp">25sp</dimen>
+    <dimen name="textSize_15sp">15sp</dimen>
+</resources>

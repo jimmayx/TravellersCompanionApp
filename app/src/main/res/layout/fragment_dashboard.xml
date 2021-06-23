@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_64"
+            android:padding="@dimen/margin_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            card_view:cardCornerRadius="@dimen/corner_radius_4dp">
+
+            <TextView
+                android:id="@+id/tv_welcoming"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/welcoming_to_country"
+                android:textAlignment="center" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout100dp"
+            android:layout_marginTop="@dimen/margin_32"
+            app:cardCornerRadius="@dimen/corner_radius_4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_view">
+
+            <Button
+                android:id="@+id/btn_takeQuiz"
+                android:layout_width="@dimen/width175dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginHorizontal="@dimen/margin_125dp"
+                android:text="@string/take_the_quiz" />
+
+            <TextView
+                android:id="@+id/tv_quiz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/margin_16"
+                android:gravity="center"
+                android:text="@string/quiz_card_text" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout125dp"
+            android:layout_marginTop="@dimen/margin_32"
+            app:cardCornerRadius="@dimen/corner_radius_4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_view2">
+
+            <Button
+                android:id="@+id/btn_translate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/layout75dp"
+                android:text="@string/translate" />
+
+            <TextView
+                android:id="@+id/tv_translate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/margin_16"
+                android:text="@string/translate_description"
+                android:textAlignment="center" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout100dp"
+            android:layout_marginTop="@dimen/margin_32"
+            app:cardCornerRadius="@dimen/corner_radius_4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_view3">
+
+            <Button
+                android:id="@+id/btn_phrases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginHorizontal="@dimen/layout145dp"
+                android:paddingTop="@dimen/margin_16"
+                android:text="@string/phrases" />
+
+            <TextView
+                android:id="@+id/tv_phrases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/margin_16"
+                android:text="@string/phrases_description"
+                android:textAlignment="center" />
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

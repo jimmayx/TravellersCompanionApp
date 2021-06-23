@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Traveller\'s Companion App</string>
+    <string name="home">Home</string>
+    <string name="game">Game</string>
+    <string name="results">Results</string>
+    <string name="play">Play</string>
+    <string name="current_score">Current Score: %1$s</string>
+    <string name="correct">Correct</string>
+    <string name="skip">Skip</string>
+    <string name="end">End</string>
+    <string name="finish">Finish!</string>
+    <string name="final_score">You Scored: %1$s</string>
+    <string name="connection_error">Connection Error :(</string>
+    <string name="loading">Loading…</string>
+    <string name="name">Name: %1$s</string>
+    <string name="capital">Capital: %1$s</string>
+    <string name="flag">flag</string>
+    <string name="welcoming_to_country">Welcome to the Traveller\'s Companion App!</string>
+    <string name="take_the_quiz">Take the quiz!</string>
+    <string name="quiz_card_text">Take the quiz to test your general knowledge of the country.</string>
+    <string name="translate">Translate</string>
+    <string name="translate_description">Translate phrases from English to the main language of the country.</string>
+    <string name="phrases">Phrases</string>
+    <string name="phrase1">Phrase 1: %1$s</string>
+    <string name="phrase2">Phrase 2: %1$s</string>
+    <string name="phrase3">Phrase 3: %1$s</string>
+    <string name="phrase4">Phrase 4: %1$s</string>
+    <string name="phrase5">Phrase 5: %1$s</string>
+    <string name="phrases_description">Learn some colloquial phases from the country.</string>
+    <string name="phrases_intro">These are a handful of common colloquial phrases from %1$s</string>
+    <string name="map">Map</string>
+    <string name="tvTranslate">Enter a word or phrase you wish to translate:</string>
+    <string name="translate_this">Translate this!</string>
+    <string name="translationETDesc">This is where you type in what you would like to translate!</string>
+    <string name="lottieName_travel">travel.json</string>
+    <string name="change_style">Change Style</string>
+</resources>

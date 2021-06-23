@@ -1,0 +1,218 @@
+[
+  {
+    "name": "Otaki Beach",
+    "city": "Wellington",
+    "location": {
+      "latitude": -40.739433,
+      "longitude": 175.114304
+    },
+    "country": "New Zealand"
+  },
+  {
+    "name": "Waitomo Glowworm Caves",
+    "city": "Waitomo",
+    "location": {
+      "latitude": -38.261894,
+      "longitude": 175.098572
+    },
+    "country": "New Zealand"
+  },
+  {
+    "name": "Milford Sound",
+    "city": "Fjordland",
+    "location": {
+      "latitude": -44.648281,
+      "longitude": 167.905777
+    },
+    "country": "New Zealand"
+  },
+  {
+    "name": "Charlotte Pass, Kosciuszko National Park",
+    "city": "New South Wales",
+    "location": {
+      "latitude": -36.427891,
+      "longitude": 148.333679
+    },
+    "country": "Australia"
+  },
+  {
+    "name": "Queensland Museum",
+    "city": "South Brisbane",
+    "location": {
+      "latitude": -27.472895,
+      "longitude": 153.017990
+    },
+    "country": "Australia"
+  },
+  {
+    "name": "Bondi Beach",
+    "city": "Sydney",
+    "location": {
+      "latitude": -33.890842,
+      "longitude": 151.274292
+    },
+    "country": "Australia"
+  },
+  {
+    "name": "Sankt Petri Church",
+    "city": "Malmö",
+    "location": {
+      "latitude": 55.607075,
+      "longitude": 13.002716
+    },
+    "country": "Sweden"
+  },
+  {
+    "name": "Gamla Stan, the Old Town of Stockholm,",
+    "city": "Stockholm",
+    "location": {
+      "latitude": 59.325695,
+      "longitude": 18.071869
+    },
+    "country": "Sweden"
+  },
+  {
+    "name": "Muddus National Park",
+    "city": "Lapland",
+    "location": {
+      "latitude": 67.000122,
+      "longitude": 20.166641
+    },
+    "country": "Sweden"
+  },
+  {
+    "name": "Aarhus Cathedral",
+    "city": "Aarhus",
+    "location": {
+      "latitude": 56.156635,
+      "longitude": 10.210365
+    },
+    "country": "Denmark"
+  },
+  {
+    "name": "Northeast Greenland National Park",
+    "city": "Greenland",
+    "location": {
+      "latitude": 76.000000,
+      "longitude": -30.000000
+    },
+    "country": "Denmark"
+  },
+  {
+    "name": "Djurs Sommerland",
+    "city": "Nimtofte",
+    "location": {
+      "latitude": 56.426338,
+      "longitude": 10.548677
+    },
+    "country": "Denmark"
+  },
+  {
+    "name": "Viking Valley",
+    "city": "Gudvangen",
+    "location": {
+      "latitude": 60.878635,
+      "longitude": 6.842365
+    },
+    "country": "Norway"
+  },
+  {
+    "name": "The Geirangerfjord",
+    "city": "Stranda",
+    "location": {
+      "latitude": 62.103561,
+      "longitude": 7.099228
+    },
+    "country": "Norway"
+  },
+  {
+    "name": "Solastranden",
+    "city": "Sola",
+    "location": {
+      "latitude": 58.886177,
+      "longitude": 5.601995
+    },
+    "country": "Norway"
+  },
+  {
+    "name": "Wrocław Cathedral",
+    "city": "Wrocław",
+    "location": {
+      "latitude": 51.113876,
+      "longitude": 17.046286
+    },
+    "country": "Poland"
+  },
+  {
+    "name": "Sanctuary of the Black Madonna",
+    "city": "Częstochowa",
+    "location": {
+      "latitude": 50.812569,
+      "longitude": 19.098169
+    },
+    "country": "Poland"
+  },
+  {
+    "name": "Roztocze National Park",
+    "city": "Zwierzyniec",
+    "location": {
+      "latitude": 50.606030,
+      "longitude": 22.962936
+    },
+    "country": "Poland"
+  },
+  {
+    "name": "Turku Cathedral",
+    "city": "Turku",
+    "location": {
+      "latitude": 60.452473,
+      "longitude": 22.278324
+    },
+    "country": "Finland"
+  },
+  {
+    "name": "Näsinneula Observation Tower",
+    "city": "Tampere",
+    "location": {
+      "latitude": 61.504967,
+      "longitude": 23.743065
+    },
+    "country": "Finland"
+  },
+  {
+    "name": "The Senate Square",
+    "city": "Helsinki",
+    "location": {
+      "latitude": 60.169716,
+      "longitude": 24.952087
+    },
+    "country": "Finland"
+  },
+  {
+    "name": "Leeds Castle",
+    "city": "Maidstone, Kent",
+    "location": {
+      "latitude": 51.248562,
+      "longitude": 0.630080
+    },
+    "country": "England"
+  },
+  {
+    "name": "St Paul's Cathedral",
+    "city": "London",
+    "location": {
+      "latitude": 51.513611,
+      "longitude": -0.098056
+    },
+    "country": "England"
+  },
+  {
+    "name": "Netley Abbey",
+    "city": "Southampton, Hampshire",
+    "location": {
+      "latitude": 50.872963,
+      "longitude": -1.353207
+    },
+    "country": "England"
+  }
+]

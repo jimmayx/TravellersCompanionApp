@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.phrases.PhrasesViewModel">
+
+    <data>
+
+        <variable
+            name="phrasesViewModel"
+            type="op.mobile.app.dev.simjd1.travelling.ui.phrases.PhrasesViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view_phrases"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_64"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            card_view:cardCornerRadius="@dimen/corner_radius_4dp">
+
+            <TextView
+                android:id="@+id/tv_phrases_intro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@{String.format(@string/phrases_intro, phrasesViewModel.countryName)}"
+                android:textAlignment="center"
+                android:textSize="@dimen/textSize_25sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view_phrase1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_32"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/card_view_phrases"
+            app:layout_constraintTop_toBottomOf="@id/card_view_phrases"
+            card_view:cardCornerRadius="@dimen/corner_radius_4dp">
+
+            <TextView
+                android:id="@+id/tv_phrase1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/layout10dp"
+                android:layout_marginBottom="@dimen/layout10dp"
+                android:paddingTop="@dimen/layout10dp"
+                android:paddingBottom="@dimen/layout10dp"
+                android:text="@{String.format(@string/phrase1, phrasesViewModel.phrase1)}"
+                android:textAlignment="center"
+                android:textSize="@dimen/textSize_15sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view_phrase2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/card_view_phrase1"
+            app:layout_constraintTop_toBottomOf="@id/card_view_phrase1"
+            card_view:cardCornerRadius="@dimen/corner_radius_4dp">
+
+            <TextView
+                android:id="@+id/tv_phrase2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/layout10dp"
+                android:layout_marginBottom="@dimen/layout10dp"
+                android:paddingTop="@dimen/layout10dp"
+                android:paddingBottom="@dimen/layout10dp"
+                android:text="@{String.format(@string/phrase2, phrasesViewModel.phrase2)}"
+                android:textAlignment="center"
+                android:textSize="@dimen/textSize_15sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view_phrase3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/card_view_phrase2"
+            app:layout_constraintTop_toBottomOf="@id/card_view_phrase2"
+            card_view:cardCornerRadius="@dimen/corner_radius_4dp">
+
+            <TextView
+                android:id="@+id/tv_phrase3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/layout10dp"
+                android:layout_marginBottom="@dimen/layout10dp"
+                android:paddingTop="@dimen/layout10dp"
+                android:paddingBottom="@dimen/layout10dp"
+                android:text="@{String.format(@string/phrase3, phrasesViewModel.phrase3)}"
+                android:textAlignment="center"
+                android:textSize="@dimen/textSize_15sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view_phrase4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/card_view_phrase3"
+            app:layout_constraintTop_toBottomOf="@id/card_view_phrase3"
+            card_view:cardCornerRadius="@dimen/corner_radius_4dp">
+
+            <TextView
+                android:id="@+id/tv_phrase4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/layout10dp"
+                android:layout_marginBottom="@dimen/layout10dp"
+                android:paddingTop="@dimen/layout10dp"
+                android:paddingBottom="@dimen/layout10dp"
+                android:text="@{String.format(@string/phrase4, phrasesViewModel.phrase4)}"
+                android:textAlignment="center"
+                android:textSize="@dimen/textSize_15sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view_phrase5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/card_view_phrase4"
+            app:layout_constraintTop_toBottomOf="@id/card_view_phrase4"
+            card_view:cardCornerRadius="@dimen/corner_radius_4dp">
+
+            <TextView
+                android:id="@+id/tv_phrase5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/layout10dp"
+                android:layout_marginBottom="@dimen/layout10dp"
+                android:paddingTop="@dimen/layout10dp"
+                android:paddingBottom="@dimen/layout10dp"
+                android:text="@{String.format(@string/phrase5, phrasesViewModel.phrase5)}"
+                android:textAlignment="center"
+                android:textSize="@dimen/textSize_15sp" />
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
