@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     continue-on-error: true
     steps:
-      
+
       - name: Checkout
         uses: actions/checkout@v2
 
@@ -21,15 +21,15 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
-            
+
       - name: Access GOOGLE_MAPS_KEY
         env:
-            GOOGLE_MAPS_KEY: ${{ secrets.GOOGLE_MAPS_KEY }}
+          GOOGLE_MAPS_KEY: ${{ secrets.GOOGLE_MAPS_KEY }}
         run: echo GOOGLE_MAPS_KEY=\"$GOOGLE_MAPS_KEY\" > ./local.properties
 
       - name: Access YANDEX_API_KEY
         env:
-            YANDEX_API_KEY: ${{ secrets.YANDEX_API_KEY }}
+          YANDEX_API_KEY: ${{ secrets.YANDEX_API_KEY }}
         run: echo YANDEX_API_KEY=\"$YANDEX_API_KEY\" > ./local.properties
 
       - name: Run Debug Tests
@@ -68,6 +68,16 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
+
+      - name: Access GOOGLE_MAPS_KEY
+        env:
+          GOOGLE_MAPS_KEY: ${{ secrets.GOOGLE_MAPS_KEY }}
+        run: echo GOOGLE_MAPS_KEY=\"$GOOGLE_MAPS_KEY\" > ./local.properties
+
+      - name: Access YANDEX_API_KEY
+        env:
+          YANDEX_API_KEY: ${{ secrets.YANDEX_API_KEY }}
+        run: echo YANDEX_API_KEY=\"$YANDEX_API_KEY\" > ./local.properties
 
       - name: Assemble Debug
         run: ./gradlew assembleDebug
