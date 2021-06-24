@@ -37,7 +37,8 @@ jobs:
         with:
           api-level: 28
           target: default
-          arch: x86_64
+          arch: x86
+          emulator-options: -no-snapshot-save -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           profile: Nexus 6
           script: ./gradlew connectedCheck --stacktrace
 
