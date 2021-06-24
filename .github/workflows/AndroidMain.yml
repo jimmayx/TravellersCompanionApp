@@ -22,12 +22,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
-      - name: Access GOOGLE_MAPS_KEY
+      - name: Load Google Maps Key
         env:
           GOOGLE_MAPS_KEY: ${{ secrets.GOOGLE_MAPS_KEY }}
         run: echo GOOGLE_MAPS_KEY=\"$GOOGLE_MAPS_KEY\" > ./local.properties
 
-      - name: Access YANDEX_API_KEY
+      - name: Load Yandex API Key
         env:
           YANDEX_API_KEY: ${{ secrets.YANDEX_API_KEY }}
         run: echo YANDEX_API_KEY=\"$YANDEX_API_KEY\" > ./local.properties
@@ -39,7 +39,7 @@ jobs:
           target: default
           arch: x86_64
           profile: Nexus 6
-          script: ./gradlew connectedCheck --continue
+          script: ./gradlew connectedCheck
 
       - name: Upload Test Reports
         if: ${{ always() }}
