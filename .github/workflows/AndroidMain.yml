@@ -5,7 +5,7 @@ on: pull_request
 jobs:
   test_job:
     name: Test
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     continue-on-error: true
     steps:
 
@@ -31,9 +31,6 @@ jobs:
         env:
           YANDEX_API_KEY: ${{ secrets.YANDEX_API_KEY }}
         run: echo YANDEX_API_KEY=\"$YANDEX_API_KEY\" > ./local.properties
-
-      - name: Run Debug Tests
-        run: ./gradlew testDebugUnitTest --continue
 
       - name: Run Instrumented Tests
         uses: reactivecircus/android-emulator-runner@v2
